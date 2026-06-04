@@ -29,7 +29,6 @@ class Department(Base):
         back_populates="children"
     )
 
-    # Связь с сотрудниками
     employees: Mapped[list["Employee"]] = relationship(
         "Employee",
         back_populates="department",
